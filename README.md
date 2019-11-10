@@ -72,6 +72,14 @@ Each new feature should reside in its own branch, which can be pushed to the cen
  
  Continue your work and use Git like you normally would.
  
+ Getting a published feature
+ Get a feature published by another user.
+ 
+ git flow feature pull origin MYFEATURE
+ You can track a feature on origin by using
+ 
+ git flow feature track MYFEATURE
+ 
  Finishing a feature branch
  When you’re done with the development work on the feature, the next step is to merge the feature_branch into develop.
  
@@ -110,6 +118,9 @@ Each new feature should reside in its own branch, which can be pushed to the cen
  Or with the git-flow extension:
  
  git flow release finish '0.1.0'
+ 
+ 
+ Don't forget to push your tags with git push origin --tags
  
  
  Hotfix Branches
