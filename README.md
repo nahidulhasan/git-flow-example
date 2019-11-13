@@ -19,15 +19,19 @@ Gitflow is really just an abstract idea of a Git workflow. This means it dictate
  You need a working git installation as prerequisite.  Git flow works on macOS, Linux and Windows  
    
 #### macOS  
+
  Homebrew  
 ``` $ brew install git-flow-avh  ```
+
  Macports  
 ``` $ port install git-flow-avh ``` 
    
-#### Linux  
+#### Linux 
+ 
  ``` $ apt-get install git-flow  ```
  
- #### Windows (Cygwin)  
+ #### Windows (Cygwin) 
+  
  ```$ wget -q -O - --no-check-certificate https://raw.github.com/petervanderdoes/gitflow-avh/develop/contrib/gitflow-installer.sh install stable | bash  ```
    
  ### Getting started  
