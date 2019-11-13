@@ -81,7 +81,7 @@ git flow feature pull origin feature_branch
 git flow feature track feature_branch
 ```  
    
-#### Finishing a feature branch  
+##### Finishing a feature branch  
  When you’re done with the development work on the feature, the next step is to merge the feature_branch into develop.  
    
  Without the git-flow extensions:   
@@ -111,7 +111,7 @@ git flow bugfix publish bugfix_branch
 ```  
  
    
-#### Finishing a bugfix branch  
+##### Finishing a bugfix branch  
  When you’re fixed bug, the next step is to merge the bugfix_branch into develop.  
  ```
  git flow bugfix finish bugfix_branch  
@@ -120,6 +120,8 @@ git flow bugfix publish bugfix_branch
 #### Release Branches  
   
  Creating this branch starts the next release cycle, so no new features can be added after this point—only bug fixes, documentation generation, and other release-oriented tasks should go in this branch. Once it's ready to ship, the release branch gets merged into master and tagged with a version number.   
+ 
+ ##### Creating a release branch   
  
  Without the git-flow extensions:  
    
@@ -134,6 +136,7 @@ git flow bugfix publish bugfix_branch
   
  Switched to a new branch 'release/0.1.0
   
+  ##### Finishing a release branch  
  To finish a release branch, use the following methods:  
    
  Without the git-flow extensions:  
@@ -141,21 +144,26 @@ git flow bugfix publish bugfix_branch
  git checkout master  
  git merge release/0.1.0  
  ```
- Or with the git-flow extension:  
+ When using the git-flow extension::  
    ```
  git flow release finish '0.1.0'  
    ```
    
-Once the release is ready to ship, it will get merged it into master and develop, then the release branch will be deleted. It’s important to merge back into develop because critical updates may have been added to the release branch and they need to be accessible to new features. If your organization stresses code review, this would be an ideal place for a pull request.  
+Once the release is ready to ship, it will get merged it into master and develop, then the release branch will be deleted. 
+It’s important to merge back into develop because critical updates may have been added to the release branch and they need to 
+be accessible to new features. If your organization stresses code review, this would be an ideal place for a pull request.  
     
  Don't forget to push your tags with ```git push origin --tags  ```
    
    
  #### Hotfix Branches  
    
- Maintenance or “hotfix” branches are used to quickly patch production releases. Hotfix branches are a lot like release branches and feature branches except they're based on master instead of develop. This is the only branch that should fork directly off of master. As soon as the fix is complete, it should be merged into both master and  
+ Maintenance or “hotfix” branches are used to quickly patch production releases. Hotfix branches are a 
+ lot like release branches and feature branches except they're based on master instead of develop. 
+ This is the only branch that should fork directly off of master. As soon as the fix is complete, it should be merged into both master and  
   develop (or the current release branch), and master should be tagged with an updated version number.  
     
+   ##### Creating a hotfix branch
   Without the git-flow extensions:  
   ```
   git checkout master  
@@ -167,10 +175,7 @@ Once the release is ready to ship, it will get merged it into master and develop
    git flow hotfix start hotfix_branch  
    ```
     
- 
-   To finish a release branch, use the following methods: 
-    Similar to finishing a release branch, a hotfix branch gets merged into both master and develop.  
-    
+  ##### Finishing a hotfix branch    
 Without the git-flow extensions:  
   ```  
   git checkout master  
@@ -187,12 +192,12 @@ Without the git-flow extensions:
     
    
  ### The overall flow of Gitflow is:      
- -   A develop branch is created from master    
- -   Feature branches are created from develop  
- -   When a feature is complete it is merged into the develop branch  
- -   Bugfix branches are created from develop
- -   When bug fixed are done  it is merged into the develop branch 
- -   Release branch is created from develop
- -   When the release branch is done it is merged into develop and master  
- -   If an issue in master is detected a hotfix branch is created from master  
- -   Once the hotfix is complete it is merged to both develop and master
+-   A develop branch is created from master    
+-   Feature branches are created from develop  
+-   When a feature is complete it is merged into the develop branch  
+-   Bugfix branches are created from develop
+-   When bug fixed are done  it is merged into the develop branch 
+-   Release branch is created from develop
+-   When the release branch is done it is merged into develop and master  
+-   If an issue in master is detected a hotfix branch is created from master  
+-   Once the hotfix is complete it is merged to both develop and master
