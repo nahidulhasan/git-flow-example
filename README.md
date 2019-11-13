@@ -1,5 +1,11 @@
 # Git Flow - Why and How to use:  
-  Git-flow is a wrapper around Git.
+
+  A collection of Git extensions to define a strict branching model designed around the project release for Vincent Driessen's [branching model](http://nvie.com/git-model "original blog post"). 
+   
+ Gitflow is really just an abstract idea of a Git workflow. This means it dictates what kind of branches to set up and how to merge 
+ them together. The git-flow toolset is an actual command line tool that has an installation process.Git-flow extension is a wrapper around Git.
+
+
 ## Why should use git flow:  
   
 - GitFlow is a collection of Git commands to provide many repository operations with just single command.  
