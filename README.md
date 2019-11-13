@@ -1,10 +1,7 @@
 # Git Flow - Why and How to use:  
-
   A collection of Git extensions to define a strict branching model designed around the project release for Vincent Driessen's [branching model](http://nvie.com/git-model "original blog post"). 
-   
- Gitflow is really just an abstract idea of a Git workflow. This means it dictates what kind of branches to set up and how to merge 
- them together. The git-flow toolset is an actual command line tool that has an installation process.Git-flow extension is a wrapper around Git.
-
+  
+Gitflow is really just an abstract idea of a Git workflow. This means it dictates what kind of branches to set up and how to merge them together. The git-flow toolset is an actual command line tool that has an installation process.Git-flow extension is a wrapper around Git.
 
 ## Why should use git flow:  
   
@@ -19,8 +16,7 @@
  ## Installation:  
    
 ### Setup  
- You need a working git installation as prerequisite.  
- Git flow works on macOS, Linux and Windows  
+ You need a working git installation as prerequisite.  Git flow works on macOS, Linux and Windows  
    
 #### macOS  
  Homebrew  
@@ -61,7 +57,9 @@ Each new feature should reside in its own branch, which can be pushed to the cen
    git checkout -b feature_branch
    ```
  When using the git-flow extension:   
-``` git flow feature start feature_branch ``` 
+``` 
+git flow feature start feature_branch
+ ``` 
    
 ##### Publishing a feature branch  
  Without the git-flow extensions:  
@@ -69,13 +67,19 @@ Each new feature should reside in its own branch, which can be pushed to the cen
    git push origin feature_branch  
    ```
  When using the git-flow extension:   
-``` git flow feature publish feature_branch ```  
+``` 
+git flow feature publish feature_branch
+ ```  
  
- Getting a published feature  
  Get a feature published by another user.  
-```git flow feature pull origin feature_branch ``` 
+```
+git flow feature pull origin feature_branch 
+``` 
+
  You can track a feature on origin by using  
-``` git flow feature track feature_branch```  
+``` 
+git flow feature track feature_branch
+```  
    
 #### Finishing a feature branch  
  When you’re done with the development work on the feature, the next step is to merge the feature_branch into develop.  
@@ -96,11 +100,15 @@ Each new feature should reside in its own branch, which can be pushed to the cen
 After finishing feature branch, if you get bug then you can create bugfix branch. Like as feature branch it will be always created from develop branch. 
 
 ##### Creating a bugfix branch   
-``` git flow bugfix start bugfix_branch ``` 
+``` 
+git flow bugfix start bugfix_branch 
+``` 
    
  ##### Publishing a feature branch  
  
-``` git flow bugfix publish bugfix_branch ```  
+```
+git flow bugfix publish bugfix_branch 
+```  
  
    
 #### Finishing a bugfix branch  
@@ -155,7 +163,9 @@ Once the release is ready to ship, it will get merged it into master and develop
   ```
   When using the git-flow extensions:   
     
-  ``` git flow hotfix start hotfix_branch  ```
+  ```
+   git flow hotfix start hotfix_branch  
+   ```
     
  
    To finish a release branch, use the following methods: 
@@ -171,17 +181,18 @@ Without the git-flow extensions:
   ```
 
  When using the git-flow extensions: 
-  ``` git flow hotfix finish hotfix_branch  ```
+  ``` 
+  git flow hotfix finish hotfix_branch  
+  ```
     
    
  ### The overall flow of Gitflow is:      
-    - A develop branch is created from master  
-    -  A release branch is created from develop  
-    -  Feature branches are created from develop  
-    -  When a feature is complete it is merged into the develop branch  
-    - When the release branch is done it is merged into develop and master  
-    -  If an issue in master is detected a hotfix branch is created from master  
-    -  Once the hotfix is complete it is merged to both develop and master
-
-
-
+ -   A develop branch is created from master    
+ -   Feature branches are created from develop  
+ -   When a feature is complete it is merged into the develop branch  
+ -   Bugfix branches are created from develop
+ -   When bug fixed are done  it is merged into the develop branch 
+ -   Release branch is created from develop
+ -   When the release branch is done it is merged into develop and master  
+ -   If an issue in master is detected a hotfix branch is created from master  
+ -   Once the hotfix is complete it is merged to both develop and master
