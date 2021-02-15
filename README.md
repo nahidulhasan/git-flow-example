@@ -26,9 +26,14 @@ Gitflow is really just an abstract idea of a Git workflow. This means it dictate
  Macports  
 ``` $ port install git-flow-avh ``` 
    
-#### Linux 
+#### Linux (Debian)
  
  ``` $ apt-get install git-flow  ```
+ 
+ #### Linux (Fedora)
+ 
+ ``` $ sudo yum install gitflow  ```
+ 
  
  #### Windows (Cygwin) 
   
