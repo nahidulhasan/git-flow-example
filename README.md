@@ -20,10 +20,12 @@ Gitflow is really just an abstract idea of a Git workflow. This means it dictate
    
 #### macOS  
 
- Homebrew  
+ Homebrew 
+ 
 ``` $ brew install git-flow-avh  ```
 
  Macports  
+ 
 ``` $ port install git-flow-avh ``` 
    
 #### Linux (Debian)
